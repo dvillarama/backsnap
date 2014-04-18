@@ -1,12 +1,12 @@
-# Snapzap
+# Backsnap
 
-Utility for backing up and restoring AWS database accross regions.
+Utility for backing up and restoring AWS databases and snapshots accross regions.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'snapzap'
+    gem 'backsnap'
 
 And then execute:
 
@@ -14,14 +14,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install snapzap
+    $ gem install backsnap
 
 ## Usage
 
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/snapzap/fork )
+1. Fork it ( http://github.com/<my-github-username>/backsnap/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
