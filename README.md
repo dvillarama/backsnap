@@ -1,6 +1,6 @@
 # Backsnap
 
-Utility for backing up and restoring AWS databases and snapshots accross regions.
+Utility for backing up and restoring AWS databases and snapshots across regions.
 
 ## Installation
 
