@@ -7,11 +7,11 @@ module Backsnap
   class Snapshot
     attr_accessor :region
 
-    def initialize(region = 'us-east-1')
+    def initialize region = 'us-east-1'
       self.region = region
     end
 
-    def create(route53_name, snapshot_name)
+    def create route53_name, snapshot_name
       rds = AWS::RDS.new(region: region)
       rds.client.create_db_snapshot(db_instance_identifier: db_instance_id(route53_name),
                                     db_snapshot_identifier: snapshot_name)
@@ -23,8 +23,8 @@ module Backsnap
       snapshot.status
     end
 
-    def copy(source_snapshot, target_snapshot,
-                      source_region = region, target_region = region) 
+    def copy source_snapshot, target_snapshot,
+                      source_region = region, target_region = region
 
       rds = AWS::RDS.new(region: target_region)
       rds.client.copy_db_snapshot(source_db_snapshot_identifier: arn(source_snapshot, source_region),
@@ -53,6 +53,5 @@ module Backsnap
     def add_end_dot name
       name[-1] == '.' ? name : name + '.'
     end
-
   end
 end
