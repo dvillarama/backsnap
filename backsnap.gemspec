@@ -23,4 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry"
   spec.add_dependency "aws-sdk"
   spec.add_dependency "settingslogic"
+  spec.add_dependency "thor"
+  spec.add_dependency "highline"
 end
